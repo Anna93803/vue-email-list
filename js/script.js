@@ -9,6 +9,7 @@ new Vue({
     el: "#app",
     data: {
         emails: [],
+        counter: 0,
     },
     methods: {
         generationEmail() {
@@ -18,7 +19,11 @@ new Vue({
                     .then((response) => {
                         this.emails.push(response.data.response);
 
+                        this.counter ++;
+
                     });
+
+                    this.counter = 0;
             }
         }
     }

@@ -13,7 +13,7 @@
         <div id="app">
             <div class="container py-5 d-flex flex-column align-items-center">
                 <button class="btn btn-success" @click="generationEmail()">Generatore di Email</button>
-                <ul>
+                <ul v-if="counter === 10">
                     <li v-for="email in emails">{{email}}</li>
                 </ul>
             </div>
